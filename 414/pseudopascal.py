@@ -4,11 +4,15 @@ from pulser.waveforms import RampWaveform
 import pulser
 import matplotlib.pyplot as plt
 
-def set_pulse_sequence(R_ij, delta_const):
-    reg = Register({
+def get_registers(initial_d):
+    return Register({
     "q0": (0, 0),
-    "q1": (0, R_ij),
+    "q1": (0, 0),
+    "q2": (R_ij, 0),
     })
+
+def set_pulse_sequence(R_ij, delta_const):
+    reg = get_registers(R_ij)
 
     seq = Sequence(reg, MockDevice)
     seq.declare_channel("ch3", "rydberg_global")
