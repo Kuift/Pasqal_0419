@@ -1,0 +1,117 @@
+{
+    "version": "1",
+    "name": "Antiferromagnetic state with optimal control",
+    "device": {
+        "version": "1",
+        "name": "MockDevice",
+        "is_virtual": true,
+        "dimensions": 2,
+        "rydberg_level": 70,
+        "max_atom_num": 100,
+        "max_radial_distance": 50,
+        "min_atom_distance": 4,
+        "supports_slm_mask": true,
+        "interaction_coeff_xy": null,
+        "max_layout_filling": 0.5,
+        "reusable_channels": true,
+        "channels": [
+            {
+                "id": "rydberg_global",
+                "max_abs_detuning": 125.664,
+                "max_amp": 15.708,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "ground-rydberg",
+                "addressing": "Global",
+                "fixed_retarget_t": null,
+                "max_targets": null,
+                "min_retarget_interval": null
+            }
+        ]
+    },
+    "register": [
+        {
+            "name": "q0",
+            "x": -7.5,
+            "y": -3.75
+        },
+        {
+            "name": "q1",
+            "x": 0,
+            "y": -3.75
+        },
+        {
+            "name": "q2",
+            "x": 7.5,
+            "y": -3.75
+        },
+        {
+            "name": "q3",
+            "x": -7.5,
+            "y": 3.75
+        },
+        {
+            "name": "q4",
+            "x": 0,
+            "y": 3.75
+        },
+        {
+            "name": "q5",
+            "x": 7.5,
+            "y": 3.75
+        }
+    ],
+    "channels": {
+        "ising": "rydberg_global"
+    },
+    "variables": {},
+    "operations": [
+        {
+            "op": "pulse",
+            "protocol": "min-delay",
+            "channel": "ising",
+            "amplitude": {
+                "kind": "interpolated",
+                "duration": 1200,
+                "times": [
+                    0,
+                    0.25,
+                    0.5,
+                    0.75,
+                    1
+                ],
+                "values": [
+                    1e-9,
+                    11.405902685751728,
+                    15.707947559985698,
+                    15.707947559985698,
+                    1e-9
+                ]
+            },
+            "detuning": {
+                "kind": "interpolated",
+                "duration": 1200,
+                "times": [
+                    0,
+                    0.25,
+                    0.5,
+                    0.75,
+                    1
+                ],
+                "values": [
+                    -31.41592653589793,
+                    -31.41592653589793,
+                    8.854273919304688,
+                    28.11696039322039,
+                    31.41592653589793
+                ]
+            },
+            "phase": 0,
+            "post_phase_shift": 0
+        }
+    ],
+    "measurement": "ground-rydberg"
+}

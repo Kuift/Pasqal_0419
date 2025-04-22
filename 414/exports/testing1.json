@@ -1,0 +1,129 @@
+{
+  "version": "1",
+  "name": "Sequence_with_defaults",
+"register": [
+  { "name": "q0", "x": -2.6, "y": -2.6 },
+  { "name": "q1", "x": -2.6, "y":  2.6 },
+  { "name": "q2", "x":  2.6, "y": -2.6 },
+  { "name": "q3", "x":  2.6, "y":  2.6 }
+],
+
+   {
+    "name": "q3",
+    "x": 2.5,
+    "y": 2.5
+   }
+  ],
+  "channels": {
+   "ryd": "rydberg_global"
+  },
+  "variables": {},
+  "operations": [
+   {
+    "op": "config_detuning_map",
+    "detuning_map": {
+"traps": [
+  { "weight": 1.0, "x": -2.6, "y": -2.6 },
+  { "weight": 0.5, "x": -2.6, "y":  2.6 },
+  { "weight": 0.5, "x":  2.6, "y": -2.6 },
+  { "weight": 0.0, "x":  2.6, "y":  2.6 }
+]
+
+    },
+    "dmm_id": "dmm_0"
+   },
+   {
+    "op": "add_dmm_detuning",
+    "protocol": "no-delay",
+    "waveform": {
+     "kind": "ramp",
+     "duration": 200,
+     "start": -125.66370614359172,
+     "stop": 0.0
+    },
+    "dmm_id": "dmm_0"
+   },
+   {
+    "op": "pulse",
+    "channel": "ryd",
+    "protocol": "no-delay",
+    "amplitude": {
+     "kind": "constant",
+     "duration": 100,
+     "value": 5.0
+    },
+    "detuning": {
+     "kind": "constant",
+     "duration": 100,
+     "value": 0.0
+    },
+    "phase": 0.0,
+    "post_phase_shift": 0.0
+   }
+  ],
+  "measurement": null,
+  "device": {
+   "name": "AnalogDevice",
+   "dimensions": 2,
+   "rydberg_level": 60,
+   "min_atom_distance": 5,
+   "max_atom_num": 80,
+   "max_radial_distance": 38,
+   "interaction_coeff_xy": null,
+   "supports_slm_mask": false,
+   "max_layout_filling": 0.5,
+   "optimal_layout_filling": 0.45,
+   "max_sequence_duration": 6000,
+   "max_runs": 2000,
+   "requires_layout": true,
+   "reusable_channels": true,
+   "version": "1",
+   "pulser_version": "1.4.0",
+   "channels": [
+    {
+     "id": "rydberg_global",
+     "basis": "ground-rydberg",
+     "addressing": "Global",
+     "max_abs_detuning": 125.66370614359172,
+     "max_amp": 12.566370614359172,
+     "min_retarget_interval": null,
+     "fixed_retarget_t": null,
+     "max_targets": null,
+     "clock_period": 4,
+     "min_duration": 16,
+     "max_duration": 100000000,
+     "mod_bandwidth": 8,
+     "eom_config": {
+      "limiting_beam": "RED",
+      "max_limiting_amp": 188.49555921538757,
+      "intermediate_detuning": 2827.4333882308138,
+      "controlled_beams": [
+       "BLUE"
+      ],
+      "mod_bandwidth": 40,
+      "custom_buffer_time": 240
+     }
+    }
+   ],
+   "dmm_objects": [
+    {
+     "id": "dmm_0",
+     "basis": "ground-rydberg",
+     "addressing": "Global",
+     "max_abs_detuning": null,
+     "max_amp": 0,
+     "min_retarget_interval": null,
+     "fixed_retarget_t": null,
+     "max_targets": null,
+     "clock_period": 4,
+     "min_duration": 16,
+     "max_duration": 67108864,
+     "mod_bandwidth": 8,
+     "eom_config": null,
+     "bottom_detuning": -125.66370614359172,
+     "total_bottom_detuning": -12566.370614359172
+    }
+   ],
+   "is_virtual": true
+  }
+ }

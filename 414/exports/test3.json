@@ -1,0 +1,166 @@
+{
+  "version": "1",
+  "name": "Sequence_with_defaults",
+  "register": [
+    { "name": "q0", "x": -3.0, "y": 0.0 },
+    { "name": "q1", "x":  3.0, "y": 0.0 },
+    { "name": "q2", "x":  0.0, "y": 4.424163077399791 }
+  ],
+  "channels": {
+    "ch1": "rydberg_local_0",
+    "ch2": "rydberg_local_1",
+    "ch3": "rydberg_local_2"
+  },
+  "variables": {},
+  "operations": [
+    { "op": "target", "channel": "ch1", "target": 0 },
+    { "op": "target", "channel": "ch2", "target": 1 },
+    { "op": "target", "channel": "ch3", "target": 2 },
+
+    {
+      "op":       "pulse",
+      "channel":  "ch1",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    1.0,
+        "stop":     1.0
+      },
+      "detuning": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    2.0,
+        "stop":     2.0
+      },
+      "phase":            0.0,
+      "post_phase_shift": 0.0
+    },
+    {
+      "op":       "pulse",
+      "channel":  "ch2",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    1.0,
+        "stop":     1.0
+      },
+      "detuning": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    2.0,
+        "stop":     2.0
+      },
+      "phase":            0.0,
+      "post_phase_shift": 0.0
+    },
+    {
+      "op":       "pulse",
+      "channel":  "ch3",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    1.0,
+        "stop":     1.0
+      },
+      "detuning": {
+        "kind":     "ramp",
+        "duration": 1000,
+        "start":    2.0,
+        "stop":     2.0
+      },
+      "phase":            0.0,
+      "post_phase_shift": 0.0
+    }
+  ],
+  "measurement": null,
+
+  "device": {
+    "name":                 "MockDevice",
+    "is_virtual":           true,
+    "dimensions":           2,
+    "rydberg_level":        70,
+    "min_atom_distance":    0.0,
+    "max_layout_filling":   0.5,
+    "supports_slm_mask":    true,
+    "reusable_channels":    true,
+    "interaction_coeff_xy": 3700.0,
+    "version":              "1",
+    "pulser_version":       "1.4.0",
+
+    "channels": [
+      {
+        "id":                   "rydberg_global",
+        "basis":                "ground-rydberg",
+        "addressing":           "Global",
+        "clock_period":         1,
+        "min_duration":         1,
+        "fixed_retarget_t":     null,
+        "min_retarget_interval":null
+      },
+      {
+        "id":                   "rydberg_local_0",
+        "basis":                "ground-rydberg",
+        "addressing":           "Local",
+        "clock_period":         1,
+        "min_duration":         1,
+        "fixed_retarget_t":     0,
+        "min_retarget_interval":0
+      },
+      {
+        "id":                   "rydberg_local_1",
+        "basis":                "ground-rydberg",
+        "addressing":           "Local",
+        "clock_period":         1,
+        "min_duration":         1,
+        "fixed_retarget_t":     0,
+        "min_retarget_interval":0
+      },
+      {
+        "id":                   "rydberg_local_2",
+        "basis":                "ground-rydberg",
+        "addressing":           "Local",
+        "clock_period":         1,
+        "min_duration":         1,
+        "fixed_retarget_t":     0,
+        "min_retarget_interval":0
+      },
+      {
+        "id":                   "raman_global",
+        "basis":                "digital",
+        "addressing":           "Global",
+        "clock_period":         1,
+        "min_duration":         1
+      },
+      {
+        "id":                   "raman_local",
+        "basis":                "digital",
+        "addressing":           "Local",
+        "clock_period":         1,
+        "min_duration":         1,
+        "fixed_retarget_t":     0,
+        "min_retarget_interval":0
+      },
+      {
+        "id":                   "mw_global",
+        "basis":                "XY",
+        "addressing":           "Global",
+        "clock_period":         1,
+        "min_duration":         1
+      }
+    ],
+
+    "dmm_objects": [
+      {
+        "id":           "dmm_0",
+        "basis":        "ground-rydberg",
+        "addressing":   "Global",
+        "clock_period": 1,
+        "min_duration": 1,
+        "max_duration": 100000000
+      }
+    ]
+  }
+}

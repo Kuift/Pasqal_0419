@@ -1,0 +1,126 @@
+{
+    "version": "1",
+    "name": "Unnamed experiment",
+    "device": { /* … same as before … */ },
+    "register": [
+      { "name": "q0", "x": -2, "y": 0 },
+      { "name": "q1", "x":  2, "y": 0 }
+    ],
+    "channels": {
+      "ch1": "rydberg_local",
+      "ch2": "rydberg_global",
+      "ch4": "rydberg_local"
+    },
+    "operations": [
+      // 1️⃣ Local ch1 on q0 (before global)
+      { "op": "target",  "channel": "ch1", "target": 0 },
+      {
+        "op": "pulse",
+        "protocol": "min-delay",
+        "channel": "ch1",
+        "amplitude": {
+          "kind": "blackman_max",
+          "area": 1.3141910388496814,
+          "max_val": 12.566370614359172
+        },
+        "detuning": {
+          "kind": "composite",
+          "waveforms": [
+            { "kind": "ramp",     "duration": 250, "start": -125.664, "stop": -0.00029 },
+            { "kind": "constant", "duration": 750, "value": 0           }
+          ]
+        },
+        "phase": 0,
+        "post_phase_shift": 0
+      },
+  
+      // 2️⃣ Local ch4 on q1 (before global)
+      { "op": "target",  "channel": "ch4", "target": 1 },
+      {
+        "op": "pulse",
+        "protocol": "min-delay",
+        "channel": "ch4",
+        "amplitude": {
+          "kind": "blackman_max",
+          "area": 1.3141910388496814,
+          "max_val": 12.566370614359172
+        },
+        "detuning": {
+          "kind": "composite",
+          "waveforms": [
+            { "kind": "ramp",     "duration": 250, "start": -125.664, "stop": -0.00029 },
+            { "kind": "constant", "duration": 750, "value": 0           }
+          ]
+        },
+        "phase": 0,
+        "post_phase_shift": 0
+      },
+  
+      // 3️⃣ Global π‑pulse on ch2
+      {
+        "op": "pulse",
+        "protocol": "min-delay",
+        "channel": "ch2",
+        "amplitude": {
+          "kind": "constant",
+          "duration": 1000,
+          "value": 3.142
+        },
+        "detuning": {
+          "kind": "composite",
+          "waveforms": [
+            { "kind": "ramp",     "duration": 250,  "start": -125.664,  "stop": -0.00029 },
+            { "kind": "constant", "duration": 750,  "value": 0           }
+          ]
+        },
+        "phase": 0,
+        "post_phase_shift": 0
+      },
+  
+      // 4️⃣ Local ch1 on q0 (after global)
+      { "op": "target",  "channel": "ch1", "target": 0 },
+      {
+        "op": "pulse",
+        "protocol": "min-delay",
+        "channel": "ch1",
+        "amplitude": {
+          "kind": "blackman_max",
+          "area": 1.3141910388496814,
+          "max_val": 12.566370614359172
+        },
+        "detuning": {
+          "kind": "composite",
+          "waveforms": [
+            { "kind": "ramp",     "duration": 250, "start": -125.664, "stop": -0.00029 },
+            { "kind": "constant", "duration": 750, "value": 0           }
+          ]
+        },
+        "phase": 0,
+        "post_phase_shift": 0
+      },
+  
+      // 5️⃣ Local ch4 on q1 (after global)
+      { "op": "target",  "channel": "ch4", "target": 1 },
+      {
+        "op": "pulse",
+        "protocol": "min-delay",
+        "channel": "ch4",
+        "amplitude": {
+          "kind": "blackman_max",
+          "area": 1.3141910388496814,
+          "max_val": 12.566370614359172
+        },
+        "detuning": {
+          "kind": "composite",
+          "waveforms": [
+            { "kind": "ramp",     "duration": 250, "start": -125.664, "stop": -0.00029 },
+            { "kind": "constant", "duration": 750, "value": 0           }
+          ]
+        },
+        "phase": 0,
+        "post_phase_shift": 0
+      }
+    ],
+    "measurement": "ground-rydberg"
+  }
+  

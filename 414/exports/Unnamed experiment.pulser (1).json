@@ -1,0 +1,183 @@
+{
+    "version": "1",
+    "name": "Unnamed experiment",
+    "device": {
+        "version": "1",
+        "name": "MockDevice",
+        "is_virtual": true,
+        "dimensions": 2,
+        "rydberg_level": 70,
+        "max_atom_num": 100,
+        "max_radial_distance": 50,
+        "min_atom_distance": 4,
+        "supports_slm_mask": true,
+        "interaction_coeff_xy": null,
+        "max_layout_filling": 0.5,
+        "reusable_channels": true,
+        "channels": [
+            {
+                "id": "raman_local",
+                "max_abs_detuning": 125.664,
+                "max_amp": 62.832,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "digital",
+                "addressing": "Local",
+                "fixed_retarget_t": 0,
+                "max_targets": 1,
+                "min_retarget_interval": 220
+            },
+            {
+                "id": "rydberg_local",
+                "max_abs_detuning": 125.664,
+                "max_amp": 62.832,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "ground-rydberg",
+                "addressing": "Local",
+                "fixed_retarget_t": 0,
+                "max_targets": 1,
+                "min_retarget_interval": 220
+            },
+            {
+                "id": "rydberg_global",
+                "max_abs_detuning": 125.664,
+                "max_amp": 15.708,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "ground-rydberg",
+                "addressing": "Global",
+                "fixed_retarget_t": null,
+                "max_targets": null,
+                "min_retarget_interval": null
+            },
+            {
+                "id": "raman_global",
+                "max_abs_detuning": 125.664,
+                "max_amp": 62.832,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "digital",
+                "addressing": "Global",
+                "fixed_retarget_t": null,
+                "max_targets": null,
+                "min_retarget_interval": null
+            },
+            {
+                "id": "rydberg_local",
+                "max_abs_detuning": 125.664,
+                "max_amp": 62.832,
+                "clock_period": 4,
+                "min_duration": 16,
+                "max_duration": null,
+                "mod_bandwidth": null,
+                "eom_config": null,
+                "basis": "ground-rydberg",
+                "addressing": "Local",
+                "fixed_retarget_t": 0,
+                "max_targets": 1,
+                "min_retarget_interval": 220
+            }
+        ]
+    },
+    "register": [
+        {
+            "name": "q0",
+            "x": -2,
+            "y": 0
+        }
+    ],
+    "channels": {
+        "ch1": "rydberg_local",
+        "ch2": "rydberg_global",
+        "ch4": "rydberg_local"
+    },
+    "variables": {},
+    "operations": [
+        {
+            "op": "pulse",
+            "protocol": "min-delay",
+            "channel": "ch2",
+            "amplitude": {
+                "kind": "constant",
+                "duration": 1000,
+                "value": 3.142
+            },
+            "detuning": {
+                "kind": "composite",
+                "waveforms": [
+                    {
+                        "kind": "ramp",
+                        "duration": 250,
+                        "start": -125.66399999999999,
+                        "stop": -0.00029385640826766626
+                    },
+                    {
+                        "kind": "constant",
+                        "duration": 750,
+                        "value": 0
+                    }
+                ]
+            },
+            "phase": 0,
+            "post_phase_shift": 0
+        },
+        {
+            "op": "target",
+            "channel": "ch1",
+            "target": 0
+        },
+        {
+            "op": "pulse",
+            "protocol": "min-delay",
+            "channel": "ch1",
+            "amplitude": {
+                "kind": "blackman_max",
+                "area": 1.3141910388496814,
+                "max_val": 12.566370614359172
+            },
+            "detuning": {
+                "kind": "constant",
+                "value": 0,
+                "duration": 0
+            },
+            "phase": 0,
+            "post_phase_shift": 0
+        },
+        {
+            "op": "target",
+            "channel": "ch4",
+            "target": 0
+        },
+        {
+            "op": "pulse",
+            "protocol": "min-delay",
+            "channel": "ch4",
+            "amplitude": {
+                "kind": "blackman_max",
+                "area": 1.3141910388496814,
+                "max_val": 12.566370614359172
+            },
+            "detuning": {
+                "kind": "constant",
+                "value": 0,
+                "duration": 0
+            },
+            "phase": 0,
+            "post_phase_shift": 0
+        }
+    ],
+    "measurement": "ground-rydberg"
+}
