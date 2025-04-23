@@ -1,0 +1,163 @@
+{
+ "version": "1",
+ "name": "Sequence_with_defaults",
+ "register": [
+  {
+   "name": "q0",
+   "x": -5.0,
+   "y": 0.0
+  },
+  {
+   "name": "q1",
+   "x": 0.0,
+   "y": 0.0
+  },
+  {
+   "name": "q2",
+   "x": 5.0,
+   "y": 0.0
+  }
+ ],
+ "channels": {
+  "ch": "rydberg_global"
+ },
+ "variables": {},
+ "operations": [
+  {
+   "op": "pulse",
+   "channel": "ch",
+   "protocol": "min-delay",
+   "amplitude": {
+    "kind": "blackman",
+    "duration": 200,
+    "area": 3.141592653589793
+   },
+   "detuning": {
+    "kind": "constant",
+    "duration": 200,
+    "value": 0.0
+   },
+   "phase": 0.0,
+   "post_phase_shift": 0.0
+  },
+  {
+   "op": "config_slm_mask",
+   "qubits": [
+    "q1",
+    "q2"
+   ],
+   "dmm_id": "dmm_0"
+  }
+ ],
+ "measurement": null,
+ "device": {
+  "name": "MockDevice",
+  "dimensions": 3,
+  "rydberg_level": 70,
+  "min_atom_distance": 0.0,
+  "max_atom_num": null,
+  "max_radial_distance": null,
+  "interaction_coeff_xy": 3700.0,
+  "supports_slm_mask": true,
+  "max_layout_filling": 0.5,
+  "reusable_channels": true,
+  "version": "1",
+  "pulser_version": "1.4.0",
+  "channels": [
+   {
+    "id": "rydberg_global",
+    "basis": "ground-rydberg",
+    "addressing": "Global",
+    "max_abs_detuning": null,
+    "max_amp": null,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": null,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "rydberg_local",
+    "basis": "ground-rydberg",
+    "addressing": "Local",
+    "max_abs_detuning": null,
+    "max_amp": null,
+    "min_retarget_interval": 0,
+    "fixed_retarget_t": 0,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": null,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "raman_global",
+    "basis": "digital",
+    "addressing": "Global",
+    "max_abs_detuning": null,
+    "max_amp": null,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": null,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "raman_local",
+    "basis": "digital",
+    "addressing": "Local",
+    "max_abs_detuning": null,
+    "max_amp": null,
+    "min_retarget_interval": 0,
+    "fixed_retarget_t": 0,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": null,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "mw_global",
+    "basis": "XY",
+    "addressing": "Global",
+    "max_abs_detuning": null,
+    "max_amp": null,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": null,
+    "mod_bandwidth": null,
+    "eom_config": null
+   }
+  ],
+  "dmm_objects": [
+   {
+    "id": "dmm_0",
+    "basis": "ground-rydberg",
+    "addressing": "Global",
+    "max_abs_detuning": null,
+    "max_amp": 0,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 1,
+    "min_duration": 1,
+    "max_duration": 100000000,
+    "mod_bandwidth": null,
+    "eom_config": null,
+    "bottom_detuning": null
+   }
+  ],
+  "is_virtual": true
+ }
+}
