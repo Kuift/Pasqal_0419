@@ -1,33 +1,36 @@
 # Pasqal's Pulse 414 Challenge
 
-Please look into the submission.ipynb notebook for the main summary of the work realised.
+Please refer to the `submission.ipynb` notebook for the main summary of the work completed.
 
-## Structure of this repo
+**Interesting notes:**
+- A function was created to generate a QUBO matrix from atom registers.
+- Some preliminary work has been done to analyze the chaotic behavior of the Pasqal system.
 
-The Archived_notebooks folder contains various notebooks that were created to rapidly test various feature of Pasqal's Pulser technology.
+## Structure of this Repository
 
-The export folder contains Various data that we generated during the Pulse 414 challenge
+The `Archived_notebooks` folder contains various notebooks used to rapidly test different features of Pasqal's Pulser technology.
 
-The .json files can be imported into pulser studio. 
+The `export` folder contains various data generated during the Pulse 414 challenge.
 
-- QAOA_submission1.json contains the optimized pulse sequence to find the ground state using QAOA in pulser. The atoms are Arranged like the pascal Triangle.
+The `.json` files can be imported into Pulser Studio:
 
-- QAA_submission1.json contains the pulse sequence to find the ground state using QAA of neutral atoms arranged like the pascal triangle
+- `QAOA_submission1.json` contains the optimized pulse sequence for finding the ground state using QAOA in Pulser. The atoms are arranged in the shape of a Pascal triangle.
 
-![Diagram of the pascal triangle registers on pulser studio](imgs/pascal_triangle_register.jpg)
+- `QAA_submission1.json` contains the pulse sequence for finding the ground state using QAA with neutral atoms arranged in a Pascal triangle configuration.
 
-![Diagram of the pascal triangle](imgs/pascals4.jpg)
+![Diagram of the Pascal triangle registers in Pulser Studio](imgs/pascal_triangle_register.jpg)
 
-(Pascal triangle, image taken from https://jwilson.coe.uga.edu/EMAT6680Su12/Berryman/6690/BerrymanK-Pascals/BerrymanK-Pascals.html)
+![Diagram of the Pascal triangle](imgs/pascals4.jpg)  
+*Pascal triangle image from [source](https://jwilson.coe.uga.edu/EMAT6680Su12/Berryman/6690/BerrymanK-Pascals/BerrymanK-Pascals.html)*
 
-- Cat_QAA.json contains the pulse sequence to find the ground state using QAA of neutral atoms arranged like a cat
+- `Cat_QAA.json` contains the pulse sequence for finding the ground state using QAA with neutral atoms arranged in the shape of a cat.
 
-![Diagram of the cat register on pulser studio](imgs/cat_register.JPG)
+![Diagram of the cat register in Pulser Studio](imgs/cat_register.JPG)
 
-- flower_QAA.json contains the pulse sequence to find the ground state using QAA of neutral atoms arranged like a flower
+- `flower_QAA.json` contains the pulse sequence for finding the ground state using QAA with neutral atoms arranged in the shape of a flower.
 
-![Diagram of the flower register on pulser studio](imgs/flower_register.JPG)
+![Diagram of the flower register in Pulser Studio](imgs/flower_register.JPG)
 
+Some preliminary work has been done to analyze the chaotic behavior of the Pasqal system:
 
-Some prelimelarely work have been done to analyse the chaotic behavior of pasqal system.
-![graph of clustering and radius with ratio](imgs/plotly_graph.JPG)
+![Graph of clustering and radius with ratio](imgs/plotly_graph.JPG)
