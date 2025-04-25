@@ -2,6 +2,8 @@
 
 Please refer to the `submission.ipynb` notebook for the main summary of the work completed.
 
+![QAOA and QAA in action on the different registers created for this project](imgs/pasqalQAOA_QAA_flower_cat_fast_no_error-ezgif.com-video-to-gif-converter.gif)
+
 **Interesting notes:**
 - A function was created to generate a QUBO matrix from atom registers.
 - Some preliminary work has been done to analyze the chaotic behavior of the Pasqal system.
