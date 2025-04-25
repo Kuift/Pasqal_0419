@@ -29,4 +29,5 @@ The .json files can be imported into pulser studio.
 ![Diagram of the flower register on pulser studio](imgs/flower_register.JPG)
 
 
-
+Some prelimelarely work have been done to analyse the chaotic behavior of pasqal system.
+![graph of clustering and radius with ratio](imgs/plotly_graph.JPG)
