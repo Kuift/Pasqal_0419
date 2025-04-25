@@ -1,0 +1,190 @@
+{
+ "version": "1",
+ "name": "qaa_seq",
+ "register": [
+  {
+   "name": "q0",
+   "x": 0.0,
+   "y": 0.0
+  },
+  {
+   "name": "q1",
+   "x": -2.5,
+   "y": -4.330127018922193
+  },
+  {
+   "name": "q2",
+   "x": 2.5,
+   "y": -4.330127018922193
+  },
+  {
+   "name": "q3",
+   "x": -5.0,
+   "y": -8.660254037844386
+  },
+  {
+   "name": "q4",
+   "x": 0.0,
+   "y": -8.660254037844386
+  },
+  {
+   "name": "q5",
+   "x": 5.0,
+   "y": -8.660254037844386
+  },
+  {
+   "name": "q6",
+   "x": -7.5,
+   "y": -12.990381056766578
+  },
+  {
+   "name": "q7",
+   "x": -2.5,
+   "y": -12.990381056766578
+  },
+  {
+   "name": "q8",
+   "x": 2.5,
+   "y": -12.990381056766578
+  },
+  {
+   "name": "q9",
+   "x": 7.5,
+   "y": -12.990381056766578
+  },
+  {
+   "name": "q10",
+   "x": -5.0,
+   "y": -17.32050807568877
+  },
+  {
+   "name": "q11",
+   "x": 5.0,
+   "y": -17.32050807568877
+  }
+ ],
+ "channels": {
+  "ising": "rydberg_global"
+ },
+ "variables": {},
+ "operations": [
+  {
+   "op": "pulse",
+   "channel": "ising",
+   "protocol": "min-delay",
+   "amplitude": {
+    "kind": "interpolated",
+    "duration": 2000,
+    "values": [
+     1e-09,
+     12.847783182222216,
+     1e-09
+    ],
+    "times": [
+     0.0,
+     0.5,
+     1.0
+    ]
+   },
+   "detuning": {
+    "kind": "interpolated",
+    "duration": 2000,
+    "values": [
+     -5.0,
+     0.0,
+     5.0
+    ],
+    "times": [
+     0.0,
+     0.5,
+     1.0
+    ]
+   },
+   "phase": 0.0,
+   "post_phase_shift": 0.0
+  }
+ ],
+ "measurement": null,
+ "device": {
+  "name": "DigitalAnalogDevice",
+  "dimensions": 2,
+  "rydberg_level": 70,
+  "min_atom_distance": 4,
+  "max_atom_num": 100,
+  "max_radial_distance": 50,
+  "interaction_coeff_xy": null,
+  "supports_slm_mask": true,
+  "max_layout_filling": 0.5,
+  "reusable_channels": false,
+  "pre_calibrated_layouts": [],
+  "version": "1",
+  "pulser_version": "1.4.0",
+  "channels": [
+   {
+    "id": "rydberg_global",
+    "basis": "ground-rydberg",
+    "addressing": "Global",
+    "max_abs_detuning": 125.66370614359172,
+    "max_amp": 15.707963267948966,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 4,
+    "min_duration": 16,
+    "max_duration": 67108864,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "rydberg_local",
+    "basis": "ground-rydberg",
+    "addressing": "Local",
+    "max_abs_detuning": 125.66370614359172,
+    "max_amp": 62.83185307179586,
+    "min_retarget_interval": 220,
+    "fixed_retarget_t": 0,
+    "max_targets": 1,
+    "clock_period": 4,
+    "min_duration": 16,
+    "max_duration": 67108864,
+    "mod_bandwidth": null,
+    "eom_config": null
+   },
+   {
+    "id": "raman_local",
+    "basis": "digital",
+    "addressing": "Local",
+    "max_abs_detuning": 125.66370614359172,
+    "max_amp": 62.83185307179586,
+    "min_retarget_interval": 220,
+    "fixed_retarget_t": 0,
+    "max_targets": 1,
+    "clock_period": 4,
+    "min_duration": 16,
+    "max_duration": 67108864,
+    "mod_bandwidth": null,
+    "eom_config": null
+   }
+  ],
+  "dmm_objects": [
+   {
+    "id": "dmm_0",
+    "basis": "ground-rydberg",
+    "addressing": "Global",
+    "max_abs_detuning": null,
+    "max_amp": 0,
+    "min_retarget_interval": null,
+    "fixed_retarget_t": null,
+    "max_targets": null,
+    "clock_period": 4,
+    "min_duration": 16,
+    "max_duration": 67108864,
+    "mod_bandwidth": null,
+    "eom_config": null,
+    "bottom_detuning": -125.66370614359172,
+    "total_bottom_detuning": -12566.370614359172
+   }
+  ],
+  "is_virtual": false
+ }
+}
