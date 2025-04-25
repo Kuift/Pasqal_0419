@@ -20,7 +20,7 @@ The `.json` files can be imported into Pulser Studio:
 
 - `QAA_submission1.json` contains the pulse sequence for finding the ground state using QAA with neutral atoms arranged in a Pascal triangle configuration.
 
-![Diagram of the Pascal triangle registers in Pulser Studio](imgs/pascal_triangle_register.jpg)
+![Diagram of the Pascal triangle registers in Pulser Studio](imgs/pascal_triangle_register.JPG)
 
 ![Diagram of the Pascal triangle](imgs/pascals4.jpg)  
 *Pascal triangle image from [source](https://jwilson.coe.uga.edu/EMAT6680Su12/Berryman/6690/BerrymanK-Pascals/BerrymanK-Pascals.html)*
