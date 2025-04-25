@@ -1,4 +1,0 @@
-Here, for the Let’s Pulse 414 Challenge by Pasqal, register geometries shaped as a cat, a flower, 
-and Pascal’s triangle were encoded and optimized using pulse-based techniques to approximate antiferromagnetic ground states. 
-Pascal triangle configurations underwent both QAOA and QAA, revealing geometric frustration and emergent spin correlations. The optimizer did not manage to get a great state for QAOA 
-Chaotic dynamics analysis of Rydberg-driven neutral-atom registers provided insight into sensitivity and phase transitions. Pulser Studio outputs supplied pulse sequences and visualization data. This code-driven exploration demonstrates how programmable neutral-atom arrays can simulate antiferromagnetism and complex many-body phenomena, mapping artistic geometry onto physical spin models
