@@ -6,7 +6,7 @@ Please refer to the `submission.ipynb` notebook for the main summary of the work
 
 **Interesting notes:**
 - A function was created to generate a QUBO matrix from atom registers.
-- Some preliminary work has been done to analyze the chaotic behavior of the Pasqal system.
+- Some preliminary work has been done to analyze the chaotic behavior (if any) of the Pasqal system.
 
 ## Structure of this Repository
 
@@ -33,6 +33,6 @@ The `.json` files can be imported into Pulser Studio:
 
 ![Diagram of the flower register in Pulser Studio](imgs/flower_register.JPG)
 
-Some preliminary work has been done to analyze the chaotic behavior of the Pasqal system:
+Some preliminary work has been done to analyze the chaotic behavior (if any) of the Pasqal system:
 
 ![Graph of clustering and radius with ratio](imgs/plotly_graph.JPG)
